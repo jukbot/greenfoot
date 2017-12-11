@@ -9,7 +9,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Bird extends Actor{
     int dy = 0;
     public static final int gravity = 1;
- 
+    public int point = 0;
+    
     Score Score = new Score();
     
     public void act() {
@@ -38,13 +39,21 @@ public class Bird extends Actor{
               Gameover();
         }
         */
-   
-         
+       
+       if(getOneIntersectingObject(Food.class) != null){
+            point++;
+            System.out.println(getPoint());
+            getWorld().removeObjects(getWorld().getObjects(Food.class));
+        }
+       
         dy = dy;
         
         // dy = dy + gravity;
     }
     
+    public int getPoint() {
+        return point;
+    }
     public void Gameover(){
         Greenfoot.setWorld(Score);
     }

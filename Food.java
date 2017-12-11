@@ -12,22 +12,17 @@ public class Food extends Actor
      * Act - do whatever the Food wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    int point;
+  
     int speed = (int)((Math.random()*10)+3);
     public void act() 
     {
         setLocation(getX() - speed, getY());
         
-        if(getOneIntersectingObject(Bird.class) != null){
-            point = point+1;
-           
-            getWorld().removeObject(this);
-            System.out.println("S " + point);
-        }
-        
-        else if(getX() < getWorld().getWidth()-590)
+        if(getX() < getWorld().getWidth()-590)
         {
             getWorld().removeObject(this);
         }
     }    
+    
+    
 }

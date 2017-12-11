@@ -34,7 +34,6 @@ public class PlayingWorld extends World
  
        if(count % 200 == 0){
            createpipe();
-           
        }
        if (count % 300 == 0){
            createfood();
@@ -43,12 +42,6 @@ public class PlayingWorld extends World
        if(count % 20 == 0){
            createground();
        }
-       
-  
-       
-       
-       
-       
     }
     
     public void createpipe(){
@@ -66,21 +59,14 @@ public class PlayingWorld extends World
     public void createground(){
         Ground ground = new Ground();
         ground.getImage();
-        
         addObject(ground, 500, 400);
-        
-        
     }
     
     public void createfood(){
         Food food = new Food();
         int point = 0;
-        
         GreenfootImage image = food.getImage();
         addObject(food, getWidth(), getHeight()/2);
-        
-        
-        
         // -(int)(Math.random()*400)+1
         
     }

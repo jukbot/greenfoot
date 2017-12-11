@@ -23,7 +23,8 @@ public class Startworld extends World
       
         addObject(flappy, 100 , 200);
         addObject(ground, 300 , 400);
-        
+      
+        System.out.println("Start debuging console");
         
     }
     
